@@ -177,26 +177,26 @@ This plot shows GDP number (Log-scale 10) of the countries based on the income g
 To cut the countries into 5 quantil for each income group and see the data distribution.
 
 
-                        (0.811,38.8]   (38.8,76.6]   (76.6,114]   (114,152]   (152,190]
----------------------  -------------  ------------  -----------  ----------  ----------
-                                   0             0            0           0           0
-High income: nonOECD               4             5            8           4           2
-High income: OECD                 18            10            1           1           0
-Low income                         0             1            9          16          11
-Lower middle income                5            13           12           8          16
-Upper middle income               11             9            8           8           9
+|                     | (0.811,38.8]| (38.8,76.6]| (76.6,114]| (114,152]| (152,190]|
+|:--------------------|------------:|-----------:|----------:|---------:|---------:|
+|                     |            0|           0|          0|         0|         0|
+|High income: nonOECD |            4|           5|          8|         4|         2|
+|High income: OECD    |           18|          10|          1|         1|         0|
+|Low income           |            0|           1|          9|        16|        11|
+|Lower middle income  |            5|          13|         12|         8|        16|
+|Upper middle income  |           11|           9|          8|         8|         9|
 
 
 The above are number of countiries belongs ito each income group divided into five quantiles. This data clearly show GPD of the counties is distributed, even that are part of any particular income group.  
 
 
-      CountryCode    Ranking  Economy                 GDP  Income.Group          Quantile     
-----  ------------  --------  -----------------  --------  --------------------  -------------
-34    CHN                  2  China               8227103  Lower middle income   (0.811,38.8] 
-51    EGY                 38  Egypt, Arab Rep.     262832  Lower middle income   (0.811,38.8] 
-77    IDN                 16  Indonesia            878043  Lower middle income   (0.811,38.8] 
-78    IND                 10  India               1841710  Lower middle income   (0.811,38.8] 
-165   THA                 31  Thailand             365966  Lower middle income   (0.811,38.8] 
+|    |CountryCode | Ranking|Economy          |     GDP|Income.Group        |Quantile     |
+|:---|:-----------|-------:|:----------------|-------:|:-------------------|:------------|
+|34  |CHN         |       2|China            | 8227103|Lower middle income |(0.811,38.8] |
+|51  |EGY         |      38|Egypt, Arab Rep. |  262832|Lower middle income |(0.811,38.8] |
+|77  |IDN         |      16|Indonesia        |  878043|Lower middle income |(0.811,38.8] |
+|78  |IND         |      10|India            | 1841710|Lower middle income |(0.811,38.8] |
+|165 |THA         |      31|Thailand         |  365966|Lower middle income |(0.811,38.8] |
 
 *The above 5 Lower income countries belowgs amongst 38 nations with highest GDP.
 

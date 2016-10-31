@@ -150,7 +150,7 @@ Getting a mean of ranking based on the income group.
 #  The below command is to provide the mean ranking by income group. 
   Merge.GDP.STAT.AVG  <- ddply(Merge.GDP.STAT, .(Income.Group), summarize,  Ranking=mean(Ranking))
 # Below data set is a mean ranking by income group.
-  knitr::kable(Merge.GDP.STAT.AVG)
+  knitr::kable(Merge.GDP.STAT.AVG, format='markdown')
 ```
 
 The mean Ranking of high Income OECD and Non OECD group is:
@@ -184,7 +184,8 @@ To cut the countries into 5 quantil for each income group and see the data distr
 Merge.GDP.STAT$Quantile<- cut(Merge.GDP.STAT$Ranking,breaks=5) 
 #take the quantiles and income.group from the merge data file and create a table 
 quant.table<-table(Merge.GDP.STAT$Income.Group, Merge.GDP.STAT$Quantile) 
-knitr::kable(quant.table)
+
+knitr::kable(quant.table, format='markdown')
 ```
 
 
@@ -192,7 +193,7 @@ The above are number of countiries belongs ito each income group divided into fi
 
 ```{r}
 LMI.Highgdp<- Merge.GDP.STAT[which(Merge.GDP.STAT$Ranking <= 38 & Merge.GDP.STAT$Income.Group == "Lower middle income"),]
-knitr::kable(LMI.Highgdp)
+knitr::kable(LMI.Highgdp, format='markdown')
 ```
 
 *The above 5 Lower income countries belowgs amongst 38 nations with highest GDP.
