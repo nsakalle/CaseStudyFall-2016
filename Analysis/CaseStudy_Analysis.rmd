@@ -192,7 +192,6 @@ The above are number of countiries belongs ito each income group divided into fi
 
 ```{r}
 LMI.Highgdp<- Merge.GDP.STAT[which(Merge.GDP.STAT$Ranking <= 38 & Merge.GDP.STAT$Income.Group == "Lower middle income"),]
-# List of lower income countries in top 38 nations.
 knitr::kable(LMI.Highgdp)
 ```
 
