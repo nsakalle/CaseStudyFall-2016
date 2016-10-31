@@ -180,8 +180,7 @@ This plot shows GDP number (Log-scale 10) of the countries based on the income g
 To cut the countries into 5 quantil for each income group and see the data distribution.
 
 ```{r}
-# Below command cut GDp into 5 quantile
-
+# Below command cut GDP into 5 quantile
 Merge.GDP.STAT$Quantile<- cut(Merge.GDP.STAT$Ranking,breaks=5) 
 #take the quantiles and income.group from the merge data file and create a table 
 quant.table<-table(Merge.GDP.STAT$Income.Group, Merge.GDP.STAT$Quantile) 
@@ -199,6 +198,7 @@ LMI.Highgdp<- Merge.GDP.STAT[which(Merge.GDP.STAT$Ranking <= 38 & Merge.GDP.STAT
 
 ```{r}
 # List of lower income countries in top 38 nations.
+
 knitr::kable(LMI.Highgdp)
 ```
 
