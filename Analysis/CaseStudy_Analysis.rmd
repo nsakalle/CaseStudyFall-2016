@@ -215,5 +215,6 @@ All the above steps are performend in R using R studio.
 By looking at the data and graphs it is very clear that GDP of some of the courtries are different than their income group.
 SOme of the contries belong to low income group have high GDP and vice versa.
 
+###EOF
 
 
