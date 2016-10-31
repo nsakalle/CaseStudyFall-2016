@@ -190,10 +190,6 @@ Upper middle income               11             9            8           8     
 The above are number of countiries belongs ito each income group divided into five quantiles. This data clearly show GPD of the counties is distributed, even that are part of any particular income group.  
 
 
-
-**List of lower income countries in top 38 nations.**
-
-
       CountryCode    Ranking  Economy                 GDP  Income.Group          Quantile     
 ----  ------------  --------  -----------------  --------  --------------------  -------------
 34    CHN                  2  China               8227103  Lower middle income   (0.811,38.8] 
