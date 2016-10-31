@@ -143,4 +143,10 @@ Merge.GDP.STAT$Quantile<- cut(Merge.GDP.STAT$Ranking,breaks=5)
 quant.table<-table(Merge.GDP.STAT$Income.Group, Merge.GDP.STAT$Quantile) 
 quant.table 
 knitr::kable(quant.table)
+
+LMI.Highgdp<- Merge.GDP.STAT[which(Merge.GDP.STAT$Ranking <= 38 & Merge.GDP.STAT$Income.Group == "Lower middle income"),]
+
+# List of lower income countries in top 38 nations.
+knitr::kable(LMI.Highgdp)
+
 ###############################EOF################################################
