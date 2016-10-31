@@ -31,7 +31,7 @@ The objective of this case study is to merge both the files, make the data consi
 
 This analysis is done in R (R is a language and environment for statistical computing and graphics).
 
-**Making environment ready**
+###**Making environment ready**
 
 ``` {r}
 ## The first step is to load R libraries that are required for the analysis.
@@ -40,13 +40,17 @@ library(plyr)
 library(ggplot2)
 library(knitr)
 ```
-** Getting Gather, Merge and Tidy file **
+
+###** Getting Gather, Merge and Tidy file **
+
 ```{r}
 source("../Analysis/Gather.R", echo=TRUE )
 source("../Analysis/Tidy.R", echo=TRUE )
 source("../Analysis/Merge.R", echo=TRUE )
 ```
-**Seting up project directory path.**
+
+###**Seting up project directory path.**
+
 **Data Gathering - File read and visual inspection**
 
 ``` {r}
@@ -66,7 +70,8 @@ GDP <- read.csv("GDP.csv", skip=3,header=TRUE)
   FEDSTATS_RAW<-FEDSTATS
 ```
 
-**Tidy Data**
+###**Tidy Data**
+
  Data quality is most important aspect of any sort of data analysis.
  Below are steps to make sure data is cleaned up for good anaylsis. Its important to review data before and after data cleanup.
  
@@ -90,10 +95,13 @@ GDP <- read.csv("GDP.csv", skip=3,header=TRUE)
   Final.GDP <- GDP.Final.Clean[!(is.na(GDP.Final.Clean$GDP)), ]
   nrow(Final.GDP)
 ```
+The above show the numbers of rows in the data frame before and after cleanup.
 
-**Data Merge and Analysis 1**
+###**Data Merge and Analysis 1**
+
 *Data Merge using country code from both the files.*
 *verify Numbers of Ids matched from both the files.*
+
 To continue with the analysis, in the following steps data from GDP and Education file is merged on country code.
 After merging both the file, its important to visually inspect data to make sure data does not have any more anomalies.
 
@@ -112,7 +120,12 @@ After merging both the file, its important to visually inspect data to make sure
   GDP.STAT.MATCH <- nrow(Merge.GDP.STAT)
   print(paste0("IDs Matched:", GDP.STAT.MATCH))
 ```
-**Data Sort and Analysis 2**
+
+#####Number of ID matched 189
+
+
+###**Data Sort and Analysis 2**
+
 To sort the data on GDP in assending order and publish the coutry stand 13 on the list.
 ```{r}
 # To sort the data by GDP, this column has to convert into numeric. This column is currently defined as character.
@@ -126,11 +139,13 @@ To sort the data on GDP in assending order and publish the coutry stand 13 on th
 # This is to dispaly 13 row of the data set\ after sorting the dataset.  
   Sort.GDP.Stat.13 <- Sort.GDP.Stat[13,]
   knitr::kable(Sort.GDP.Stat.13)
-
 ```
 
-**Analysis 3: AVG GDP Ranking **
-Getting a mean of ranking based on the income group. 
+
+###**Analysis 3: AVG GDP Ranking **
+
+Getting a mean of ranking based on the income group.
+
 ```{r}
 #  The below command is to provide the mean ranking by income group. 
   Merge.GDP.STAT.AVG  <- ddply(Merge.GDP.STAT, .(Income.Group), summarize,  Ranking=mean(Ranking))
@@ -145,8 +160,9 @@ The mean Ranking of high Income OECD and Non OECD group is:
 |High income: nonOECD |  91.91304|
 |High income: OECD    |  32.96667|
 
-**Analysis 4** 
- To generate a plot to see GDP on scale based on the income group.
+###**Analysis 4** 
+
+To generate a plot to see GDP on scale based on the income group.
 
 ```{r}
 ## ggplot with color by income group.
@@ -159,7 +175,8 @@ ggplot(Merge.GDP.STAT)+ geom_point(aes(x=GDP,y=Income.Group,colour=Income.Group)
 
 This plot shows GDP number (Log-scale 10) of the countries based on the income group. This graphs clearly show the mean GDP of income group with  Highincome OECD and High Income Non OECD is significantly higher than other income groups.
 
-**Analysis 5**
+###**Analysis 5**
+
 To cut the countries into 5 quantil for each income group and see the data distribution.
 
 ```{r}
@@ -181,9 +198,11 @@ knitr::kable(LMI.Highgdp, padding = 2, align = 'l',format = "html")
 ```
 
 
+
 The above 5 Lower income countries belowgs amongst 38 nations with highest GDP.
 
 ### **CaseStudy - Conclusion**
+
 This objective of this case study is to perform key steps that requires in any data analysis.
 These keys steps are very foundation of any project where it requires to read, study, interpret and process information.
 We performed foundation step like data gathering, data cleaning, data merging, data analysis and data processing on data GDP and Education data from world bank.

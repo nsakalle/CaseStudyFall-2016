@@ -20,10 +20,12 @@ The objective of this case study is to merge both the files, make the data consi
 
 This analysis is done in R (R is a language and environment for statistical computing and graphics).
 
-**Making environment ready**
+###**Making environment ready**
 
 
-** Getting Gather, Merge and Tidy file **
+
+###** Getting Gather, Merge and Tidy file **
+
 
 ```
 ## 
@@ -77,7 +79,9 @@ This analysis is done in R (R is a language and environment for statistical comp
 ## > print(paste0("IDs Matched:", GDP.STAT.MATCH))
 ## [1] "IDs Matched:224"
 ```
-**Seting up project directory path.**
+
+###**Seting up project directory path.**
+
 **Data Gathering - File read and visual inspection**
 
 
@@ -90,7 +94,8 @@ This analysis is done in R (R is a language and environment for statistical comp
 ## [1] 234
 ```
 
-**Tidy Data**
+###**Tidy Data**
+
  Data quality is most important aspect of any sort of data analysis.
  Below are steps to make sure data is cleaned up for good anaylsis. Its important to review data before and after data cleanup.
  
@@ -102,10 +107,13 @@ This analysis is done in R (R is a language and environment for statistical comp
 ```
 ## [1] 190
 ```
+The above show the numbers of rows in the data frame before and after cleanup.
 
-**Data Merge and Analysis 1**
+###**Data Merge and Analysis 1**
+
 *Data Merge using country code from both the files.*
 *verify Numbers of Ids matched from both the files.*
+
 To continue with the analysis, in the following steps data from GDP and Education file is merged on country code.
 After merging both the file, its important to visually inspect data to make sure data does not have any more anomalies.
 
@@ -122,15 +130,23 @@ After merging both the file, its important to visually inspect data to make sure
 ```
 ## [1] "IDs Matched:189"
 ```
-**Data Sort and Analysis 2**
+
+#####Number of ID matched 189
+
+
+###**Data Sort and Analysis 2**
+
 To sort the data on GDP in assending order and publish the coutry stand 13 on the list.
 
      CountryCode    Ranking  Economy                GDP  Income.Group        
 ---  ------------  --------  --------------------  ----  --------------------
 93   KNA                178  St. Kitts and Nevis    767  Upper middle income 
 
-**Analysis 3: AVG GDP Ranking **
-Getting a mean of ranking based on the income group. 
+
+###**Analysis 3: AVG GDP Ranking **
+
+Getting a mean of ranking based on the income group.
+
 
 Income.Group              Ranking
 ---------------------  ----------
@@ -147,15 +163,17 @@ The mean Ranking of high Income OECD and Non OECD group is:
 |High income: nonOECD |  91.91304|
 |High income: OECD    |  32.96667|
 
-**Analysis 4** 
- To generate a plot to see GDP on scale based on the income group.
+###**Analysis 4** 
 
-![](Casestudy_Analysis_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+To generate a plot to see GDP on scale based on the income group.
+
+![](CaseStudy_Analysis_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
 This plot shows GDP number (Log-scale 10) of the countries based on the income group. This graphs clearly show the mean GDP of income group with  Highincome OECD and High Income Non OECD is significantly higher than other income groups.
 
-**Analysis 5**
+###**Analysis 5**
+
 To cut the countries into 5 quantil for each income group and see the data distribution.
 
 
@@ -233,9 +251,11 @@ The above are number of countiries belongs ito each income group divided into fi
 </table>
 
 
+
 The above 5 Lower income countries belowgs amongst 38 nations with highest GDP.
 
 ### **CaseStudy - Conclusion**
+
 This objective of this case study is to perform key steps that requires in any data analysis.
 These keys steps are very foundation of any project where it requires to read, study, interpret and process information.
 We performed foundation step like data gathering, data cleaning, data merging, data analysis and data processing on data GDP and Education data from world bank.
